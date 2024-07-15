@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:classicComponent="clr-namespace:ScanbotSDK.MAUI.ClassicComponent;assembly=BarcodeSDK.MAUI"
+             x:Class="Scanbot_Classic_UI_Scan_Not_Resuming.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10">
+            <classicComponent:BarcodeScannerView x:Name="cameraView"
+                                     OnBarcodeScanResult="CameraView_OnOnBarcodeScanResult"
+                                     HeightRequest="200"
+                                     HorizontalOptions="Fill"
+                                     VerticalOptions="Fill"
+                                     CameraModule="Back" />
+            <Button Text="Next page" Clicked="Button_Clicked" />
+            <Label x:Name="license" Text="License status: 60 second." />
+            <Label Text="To reproduce the bug, press 'Next page' then 'Back' then this page will no longer be able to scan barcodes. This happens every time on iOS, and sometimes on Android (keep doing next/back)." />
+            <Label x:Name="scanned" Text="Scanned barcodes:" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
