@@ -1,0 +1,1 @@
+# Scanbot-Classic-UI-Scan-Not-Resuming
