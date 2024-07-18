@@ -29,6 +29,13 @@ namespace Scanbot_Classic_UI_Scan_Not_Resuming
             license.Text = $"License status: Expires in {duration?.TotalSeconds ?? 0} seconds.";
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            
+            cameraView.Handler?.DisconnectHandler();
+        }
+
         private void CameraView_OnOnBarcodeScanResult(BarcodeResultBundle result)
         {
             Debug.WriteLine("Barcode scanned: " + result.Barcodes[0].Text);
