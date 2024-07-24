@@ -1,7 +1,8 @@
 ﻿using ScanbotSDK.MAUI;
-using ScanbotSDK.MAUI.Constants;
-using ScanbotSDK.MAUI.Models;
+using ScanbotSDK.MAUI.RTU.v1;
 using System.Diagnostics;
+using ScanbotSDK.MAUI.Barcode;
+using ScanbotSDK.MAUI.ClassicComponent;
 
 namespace Scanbot_Classic_UI_Scan_Not_Resuming
 {
@@ -11,7 +12,7 @@ namespace Scanbot_Classic_UI_Scan_Not_Resuming
         public MainPage()
         {
             InitializeComponent();
-            cameraView.BarcodeFormats = [BarcodeFormat.Ean13];
+            cameraView.BarcodeFormats = BarcodeFormats.All.ToList();
         }
 
         protected override async void OnAppearing()

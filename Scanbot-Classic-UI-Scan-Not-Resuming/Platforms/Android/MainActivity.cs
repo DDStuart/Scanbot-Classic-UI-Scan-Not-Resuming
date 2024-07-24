@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using ScanbotSDK.MAUI.Services;
+using ScanbotSDK.MAUI;
 
 namespace Scanbot_Classic_UI_Scan_Not_Resuming
 {
