@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
 using ScanbotSDK.MAUI;
-using ScanbotSDK.MAUI.Models;
 
 namespace Scanbot_Classic_UI_Scan_Not_Resuming
 {
